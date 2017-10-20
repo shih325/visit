@@ -1,0 +1,95 @@
+body {
+	padding:13px;
+	box-sizing:border-box;
+}
+.clearfix {
+	clear:both;
+}
+div {
+	border-bottom:1px solid #909090;
+	padding:20px 15px;
+	box-sizing:border-box;
+}
+div input {
+	display:block;
+	border:none!important;
+	text-align :center;
+	margin-top:10px;
+}
+.div-address label,
+.div-facilities label {
+	font-size:16px;
+}
+.address,
+.facilities {
+	margin: 0 auto!important;
+    width: 70%!important;
+	border-bottom: 1px solid #ccc!important;
+}
+.div-type p {
+	font-size:16px;
+	color:#000000;
+}
+.div-type label {
+	font-size:14px;
+	float: left;
+	margin-right:60px;
+	margin-top:20px;
+	margin-left:70px;
+	color:#46494B;
+}
+.div-type input {
+	float:left;
+	margin-right:20px;
+	margin-top:20px;
+}
+span.aui-input-addon {
+	font-size:16px;
+	float: left;
+}
+input.aui-input {
+	float:right;
+	width:27%;
+	line-height: 16px;
+    margin-bottom: 0px;
+    padding:0px;
+    border-bottom: 1px solid #555555!important;
+}
+span.str {
+	float: right;
+	width:10%;
+	line-height: 16px;
+	margin-top:10px;
+	margin-left:5px;
+	font-size:16px;
+}
+.div-description label {
+	font-size:16px;
+}
+.description {
+	width:90%;
+	display: block;
+	margin:10px auto;
+	padding:10px;
+	height:100px;
+	overflow-y:scroll;
+	border:1px solid #555555;
+	font-size:15px;
+}
+.div-photo,
+.div-submit {
+	border:none;
+}
+.photo {
+	float:right;
+}
+.room-submit {
+	display:block;
+	height:50px;
+	width:70%;
+	margin:0 auto;
+	color:#333333;
+	font-size:20px;
+	font-weight:700;
+	background:#B0D44C
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <style>
+    	header{ 
+    		background-color: #333; 
+        	height:60px;
+        	color: #fff;
+        }
+        .head{
+        	padding-top: 10px;
+        	margin-left: 10px;
+        }
+        #back{
+        	float: left;
+        }
+        #title{
+        	margin-left: 30%;
+        	margin-top: 9px;
+        	font-size: 18px;
+        	font-weight: bold;
+        }
+        #date{
+        	float:right;
+        	margin-right: 2%;
+        }
+    	.date{
+    		color: #fff;
+    		text-decoration:none;
+    		vertical-align: 13px;
+    		margin-left: -5px; 
+    	}
+    </style>
+</head>
+<body>
+	<header>		
+		<div class="head">
+			<div id="back">
+				<a href="../index.html">
+					<img src="../image/back.png" />
+				</a>
+			</div>
+			<span id="title">定位</span>
+			<div id="date">
+				<a href="date.html">
+					<img src="../image/date.png" />
+					<span class="date">日期</span>
+				</a>
+			</div>
+		</div>	    
+    </header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		var UICityList = api.require('UICityList');
+		UICityList.open({
+		    rect: {
+		        x: 0,
+		        y: 60,
+		        w: api.frameWidth,
+		        h: api.frameHeight
+		    },
+		    resource: 'widget://res/UICityList.json',
+		    styles: {
+		        searchBar: {
+		            bgColor: '#696969',
+		            cancelColor: '#E3E3E3'
+		        },
+		        location: {
+		            color: '#696969',
+		            size: 12
+		        },
+		        sectionTitle: {
+		            bgColor: '#eee',
+		            color: '#000',
+		            size: 12
+		        },
+		        item: {
+		            bgColor: '#fff',
+		            activeBgColor: '#696969',
+		            color: '#000',
+		            size: 14,
+		            height: 40
+		        },
+		        indicator: {
+		            bgColor: '#fff',
+		            color: '#696969'
+		        }
+		    },
+		    currentCity: '北京',
+		    locationWay: 'GPS',
+		    hotTitle: '热门城市',
+		    fixedOn: api.frameName,
+		    placeholder: '输入城市名或首字母查询'
+		}, function(ret, err) {
+		    if (ret) {
+		        //alert(JSON.stringify(ret));
+		        //alert("已选城市"+JSON.stringify(ret));
+		        
+		    } else {
+		        alert(JSON.stringify(err));
+		    }
+		});
+	};
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+   <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>筛选条件</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/release.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/filter.css"/>
+    <style>
+        .empty{ text-align: center; padding: 120px 0; }
+    </style>
+</head>
+<body>
+    <form class="release" method="post">
+    	<div class="div-price">
+    		<p>价格/晚</p>
+    		<span>￥</span><input type="number" /><span>——</span><span>￥</span><input type="number" />
+    	</div>
+    	<div class="div-type clearfix">
+    		<p>房源类型</p>
+	    	<label>整套房源</label>
+	    	<input type="radio" name="type" checked>
+	    	<label>独立房间</label>
+	    	<input type="radio" name="type">
+	    	<label>合作房间</label>
+	    	<input type="radio" name="type">
+    	</div>
+    	<div class="div-user clearfix">
+    		<span class="aui-input-addon">所容纳房客数</span>
+			<span class="str">人</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" />
+    	</div>
+    	<div class="div-bedroom clearfix">
+    		<span class="aui-input-addon">卧室数</span>
+			<span class="str">间</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" />
+    	</div>
+    	<div class="div-toilet clearfix">
+    		<span class="aui-input-addon">卫生间数</span>
+			<span class="str">间</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" />
+    	</div>
+    	<div class="div-bed clearfix">
+    		<span class="aui-input-addon">床铺数</span>
+			<span class="str">张</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" />
+    	</div>
+    	<div class="div-submit">
+    		<button class="filter-submit">确定</button>
+    	</div>
+    </form>
+    <script type="text/javascript" src="../script/api.js"></script>
+    <script type="text/javascript" src="../script/release.js"></script>
+</body>
+</html>

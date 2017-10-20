@@ -1,0 +1,113 @@
+body{
+	font-family: "微软雅黑";
+}
+.wrapper{
+	margin:0 15px;
+}
+/*筛选条件*/
+.sort_wrap{
+	background-color: #B0D44C ;
+	opacity:0.9;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #000;
+    font-size: 15px;
+    left: 35%;
+    line-height: 27px;
+    padding-left: 5px;
+    position: fixed;
+    top: 89%;
+    width: 100px;
+    background-image:url(../image/sort.png)  ;
+    background-repeat:no-repeat;
+    background-position:70px;
+}
+
+/*内容*/
+.content{
+	margin-top:5px;
+}
+.house{
+	text-align:center;
+	margin-bottom: 10px;
+}
+.house>a>img{
+	height:200px;
+	width: 100%;
+}
+.character{
+	float: left;
+	font-size:16px;
+	text-align:left;
+}
+.character span{
+	font-size:15px;
+	color:#666;
+}
+.img{
+	float:right;
+}
+.img img{
+	margin-left:5px;	
+	height: 25px;
+	width: 25px;
+}
+/*城市tab选择*/
+.show {display:block;}
+.hide{display:none;}
+.aui-tab {
+    position: relative;
+    left: -15px;
+	width: 108%;
+	overflow: hidden;
+	margin-top:248px;
+}
+.aui-tab-nav {
+	width: 100%;
+	display: box;
+	display: -webkit-box;
+	box-sizing: border-box;
+	font-size: 16px;
+	height: 45px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.aui-tab-nav li {
+	height: 45px;
+	line-height: 45px;
+	box-flex: 1;
+	-webkit-box-flex: 1;
+	box-sizing: border-box;
+	text-align: center;
+	color: #666;
+	border-bottom: 2px solid transparent;
+	width: 100%;
+}
+.aui-tab-nav li.active {
+	border-bottom: 2px solid #1abc9c;
+	-webkit-animation: fadeIn .5s ease both;
+	            animation: fadeIn .5s ease both;
+}
+.aui-tab-nav.aui-tab-border {
+	background-color: transparent;
+	border: 1px solid #1abc9c;
+	border-radius: 3px;
+}
+.aui-tab-nav.aui-tab-border li {
+	/*width: 1%;*/
+	overflow: hidden;
+	line-height: 43px;
+	color: #1abc9c;
+	background-color: #ffffff;
+	border-color: #1abc9c;
+	border-left: 1px solid #1abc9c;
+}
+.aui-tab-nav.aui-tab-border li:first-child {
+	border-left: 0px;
+}
+.aui-tab-nav.aui-tab-border li.active {
+	background-color: #1abc9c;
+	color: #fff;
+	/*-webkit-animation: fadeIn .5s ease both;
+            animation: fadeIn .5s ease both;*/
+}

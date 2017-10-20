@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <style>
+			*{
+				padding:0;
+				margin:0;
+				box-sizing: border-box;
+			}
+			.page {
+				position: absolute;
+				z-index:1;
+				width:100%;
+				background:rgba(42, 64, 78, 0.3);
+				color:#ffffff;
+				padding:10px;
+			}
+			.background {
+				position: absolute;
+				z-index:1;
+				float:left;
+				width:100%;
+			}
+			.header {
+				font-size: 30px;
+				color:#ffffff;
+				font-weight:500;
+				width:78%;
+				margin:30px auto;
+			}
+			.logo {
+				width:60px;
+				height:60px;
+				background-image: url('../image/logo.png');
+				background-size: 60px 60px;
+			}
+			input[type='text'],
+			input[type='password'] {
+				border-radius: 3px;
+				display: inline-block;
+				float: right;
+				padding:5px;
+				width:200px;
+				height:30px;
+				background: #fff;
+			}
+			input[type='submit'] {
+				height:35px;
+				width:95%;
+				margin-left:5px;
+				color:#333333;
+				font-size:18px;
+				font-weight:700;
+				background:#B0D44C;
+				border-radius: 3px;
+			}
+			button {
+				display: inline-block;
+			}
+			form p {
+				width:82%;
+				margin:20px auto;
+			}
+    </style>
+</head>
+<body>
+	<img src="../image/1.png" alt="背景图" class="background">
+	<div class="page">
+		<div class="header">
+			<span class="logo"></span>
+			<span class="title">VISIT</span>
+		</div>
+		<form class="log">
+			<p>
+				<label for="user">用户</label>
+				<input type="text" name="user" placeholder="请输入用户名">
+			</p>
+			<p>
+				<label for="password">密码</label>
+				<input type="password" name="password" placeholder="请输入密码">
+			</p>
+			<p>
+				<input type="submit" name="log" value="登录">
+			</p>
+			<p>
+				<span class="forget left">
+					<a href="javascript:;">忘记密码？</a>
+				</span>
+				<span class="register right">
+					<a href="javascript:;">
+						新用户注册
+					</a>
+				</span>
+			</p>
+		</form>
+		<form class="register">
+			<p>
+				<label for="user">用户</label>
+				<input type="text" name="user" placeholder="请输入用户名">
+			</p>
+			<p>
+				<label for="password">密码</label>
+				<input type="password" name="password" placeholder="请输入密码">
+			</p>
+			<p>
+				<label for="phone">手机号</label>
+				<input type="password" name="phone" placeholder="请输入大陆手机号">
+			</p>
+			<p>
+				<input type="password" name="yan">
+				<button class="time">发送验证码</button>
+			</p>
+			<p>
+				<input type="submit" name="log" value="注册">
+			</p>
+			<p>
+				<span class="forget left">
+					<a href="javascript:;">
+						忘记密码？
+					</a>
+				</span>
+				<span class="login right">
+					<a href="javascript:;">
+						登录
+					</a>
+				</span>
+			</p>
+		</form>
+		<form class="forget">
+			<p>
+				<label for="phone">手机号</label>
+				<input type="password" name="phone" placeholder="请输入大陆手机号">
+			</p>
+			<p>
+				<label for="yan">请输入验证码</label>
+				<input type="password" name="yan">
+			</p>
+			<p class="new-password">
+				<label for="new-password">新密码</label>
+				<input type="password" name="new-password" placeholder="请输入新密码">
+			</p>
+			<p>
+				<span class="login left">
+					<a href="javascript:;">
+						登录
+					</a>
+				</span>
+				<span class="register right">
+					<a href="javascript:;">
+						新用户注册
+					</a>
+				</span>
+			</p>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+
+	};
+</script>
+</html>

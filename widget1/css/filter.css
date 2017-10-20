@@ -1,0 +1,22 @@
+.div-price input {
+	display:inline-block;
+	width:16%;
+	height:30px;
+	padding:0;
+	border:1px solid #666666!important;
+	border-radius:3px;
+}
+.div-price p {
+	font-size:16px;
+	color:#000000;
+}
+.filter-submit {
+	display:block;
+	height:50px;
+	width:70%;
+	margin:0 auto;
+	color:#333333;
+	font-size:20px;
+	font-weight:700;
+	background:#B0D44C
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>发现</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/find.css"/>
+</head>
+<body>
+    <div class="wrapper">
+    	<!--筛选按钮-->
+    	<div class="sort_wrap">
+    		 <a href="sort.html"><div >筛选条件</div></a>
+    	</div>
+    	<!--城市选择-->
+		<div class="aui-tab aui-tab-dark">
+			<ul class="aui-tab-nav" id="">
+				<li class="active" onclick="tab( this );" id="beijing">北京</li>
+				<li onclick="tab( this );" id="tianjin">天津</li>
+				<li onclick="tab( this );" id="shanghai">上海</li>
+				<li onclick="tab( this );" id="hangzhou">杭州</li>
+				<li onclick="tab( this );" id="guangzhou">广州</li>
+			</ul>
+		</div>
+    	<!--内容-->
+		<div class="content">
+			<div class="beijing show">
+				<div class="house">
+					<a href="housedetail.html"><img src="../image/f1.jpg" /></a>
+					<div class="character">
+						￥789/晚
+						<br />
+						<span>整套房源 1室1床1卫</span>
+					</div>
+					<div class="img">
+						<img src="../image/collect.png" />
+						<img src="../image/comment.png" />
+						<img src="../image/share.png" />
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+				<div class="house">
+					<a href="housedetail.html"><img src="../image/f1.jpg" /></a>
+					<div class="character">
+						￥789/晚
+						<br />
+						<span>整套房源 1室1床1卫</span>
+					</div>
+					<div class="img">
+						<img src="../image/collect.png" />
+						<img src="../image/comment.png" />
+						<img src="../image/share.png" />
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<div class="tianjin hide">
+				<div class="house">
+					<a href="housedetail.html"><img src="../image/f1.jpg" /></a>
+					<div class="character">
+						￥789/晚
+						<br />
+						<span>整套房源 1室1床1卫</span>
+					</div>
+					<div class="img">
+						<img src="../image/collect.png" />
+						<img src="../image/comment.png" />
+						<img src="../image/share.png" />
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<div class="shanghai hide">
+				<div class="house">
+					<a href="housedetail.html"><img src="../image/f1.jpg" /></a>
+					<div class="character">
+						￥789/晚
+						<br />
+						<span>整套房源 1室1床1卫</span>
+					</div>
+					<div class="img">
+						<img src="../image/collect.png" />
+						<img src="../image/comment.png" />
+						<img src="../image/share.png" />
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<div class="hangzhou hide">
+				<div class="house">
+					<a href="housedetail.html"><img src="../image/f1.jpg" /></a>
+					<div class="character">
+						￥789/晚
+						<br />
+						<span>整套房源 1室1床1卫</span>
+					</div>
+					<div class="img">
+						<img src="../image/collect.png" />
+						<img src="../image/comment.png" />
+						<img src="../image/share.png" />
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<div class="guangzhou hide">
+				<div class="house">
+					<a href="housedetail.html"><img src="../image/f1.jpg" /></a>
+					<div class="character">
+						￥789/晚
+						<br />
+						<span>整套房源 1室1床1卫</span>
+					</div>
+					<div class="img">
+						<img src="../image/collect.png" />
+						<img src="../image/comment.png" />
+						<img src="../image/share.png" />
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/find.js"></script>
+	<script type="text/javascript">
+		apiready=function(){
+			var UIScrollPicture = api.require('UIScrollPicture');
+			UIScrollPicture.open({
+			    rect: {
+			        x: 0,
+			        y: 0,
+			        w: api.winWidth,
+			        h: api.winHeight / 2.5
+			    },
+			    data: {
+			        paths: [
+			            'widget://res/img/f1.jpg',
+			            'widget://res/img/f1.jpg',
+			            'widget://res/img/f1.jpg',
+			            'widget://res/img/f1.jpg'
+			        ],
+			        captions: ['1', '2', '3', '4']
+			    },
+			    styles: {
+			        caption: {
+			            height: 35,
+			            color: '#E0FFFF',
+			            size: 13,
+			            bgColor: '#696969',
+			            position: 'bottom'
+			        },
+			        indicator: {
+			            align: 'center',
+			            color: '#FFFFFF',
+			            activeColor: '#DA70D6'
+			        }
+			    },
+			    placeholderImg: 'widget://res/f1.jpg',
+			    contentMode: 'scaleToFill',
+			    interval: 5,
+			    fixedOn: api.frameName,
+			    loop: true,
+			    fixed: false
+			}
+			/*, function(ret, err) {
+			    if (ret) {
+			        alert(JSON.stringify(ret));
+			    } else {
+			        alert(JSON.stringify(err));
+			    }
+			}*/
+			
+			);
+		};
+	</script>
+</body>
+</html>

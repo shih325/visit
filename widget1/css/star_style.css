@@ -1,0 +1,18 @@
+.price {
+	color:#323237;
+	font-size:17px;
+}
+.description {
+	color:#46494B;
+	font-size:15px;
+}
+.cardl {
+	margin-left:13px;
+}
+.cardr li {
+	float: left;
+	margin-right:10px;
+} 
+.cardr li:last-of-type {
+	margin-right:0px;
+}

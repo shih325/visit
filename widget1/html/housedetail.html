@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>房源信息页</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <style>
+    	body{
+    		padding:0px;
+    		width:100%;
+    	}
+    	.content>img {
+    		width:100%;
+    		height:220px;
+    	}
+    	.cardr {float:right; width: 120px; margin-right: 20px;margin-top:10px;}
+    	.cardr li {
+    		float:left;
+    		margin-left:10px;
+    	}
+    	.title {
+    		font-size:18px;
+			color:#000000;
+    		margin-bottom:20px;
+    	}
+    	.content {
+    		width:100%;
+    	}
+    	.content>div {
+    		width:90%;
+    		margin:0 auto;
+    		border-bottom:1px solid #666666;
+    		padding:10px;
+    	}
+    	.infor {
+    		margin-top:35px!important;
+    	}
+    	.infor li {
+    		float:left;
+    		width:49%;
+    		line-height:30px;
+    		font-size:15px;
+    	}
+    	.dis {
+    		padding:10px;
+    	}
+    	.dis-infor {
+    		text-indent:2em;
+    	}
+    	.position img {
+    		width:90%;
+    		margin:0 auto;
+    		display:block;
+    	}
+    	.commentl {
+    		float:left;
+    		width:40px;
+    		height:40px;
+    		border:1px solid #555555;
+    		border-radius: 20px;
+    	}
+    	.commentl img {
+    		width:40px;
+    		height:40px;
+    		border-radius: 20px;
+    	}
+    	.commentr {
+    		float:right; 
+    		width:80%;
+    	}
+    	.user {
+    		font-size:14px;
+    	}
+    	.commet-dis {
+    		margin:10px 0;
+    	}
+    	.zan {
+    		/*padding-left:15px!important;*/
+    		background:url(../image/zan.png) no-repeat 3px 3px;
+		}
+		.hui {
+			background:url(../image/hui.png) no-repeat 3px 3px;
+    		margin-right:20px;
+		}
+    	.commentr .op button {
+    		float:right;
+    		border:1px solid #A1D4CF;
+    		border-radius: 15px;
+    		width:55px;
+    		font-size: 11px;
+    		padding:3px;
+    		text-align:right;
+    		box-sizing: border-box;
+    		line-height:20px;
+    		/*background-color: #C8C7CC;*/
+    	}
+    	.operation {
+			margin:20px auto;
+			width:70%!important;
+			border:none!important;
+    	}
+    	.operation button {
+    		float:right;
+			height:35px;
+			width:32%;
+			color:#333333;
+			font-size:18px;
+			font-weight:700;
+			background:#B0D44C;
+			border-radius: 3px;
+    	}
+    	.operation .left {
+    		margin-right:30px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="page">
+		<div class="content clearfix">
+			<img src="../image/star2.jpg"/>
+			<ul class="cardr clearfix">
+				<li>
+					<img src="../image/collect.png" alt="喜欢"/>
+				</li>
+				<li>
+					<img src="../image/comment.png" alt="收藏"/>
+				</li>
+				<li>
+					<img src="../image/share.png" alt="分享"/>
+				</li>
+			</ul>	
+			<div class="infor">
+				<p class="title">
+					基本信息：
+				</p>
+				<ul class="clearfix">
+					<li>价格：
+						<span>￥758/晚</span>
+					</li>
+					<li>房屋类型：<span>整套房源</span></li>
+					<li>标准：<span>1室1床1卫</span></li>
+					<li>可容纳房客：<span>2人</span></li>
+					<li>入住时间：8:00—20:00</li>
+					<li>房东：<span>小明</span></li>
+					<li>退房时间：<span>20:00</span></li>
+					<li>设施：电视、电脑、WiFi、空调</li>
+				</ul>
+			</div>
+			<div class="dis">
+				<p class="title">
+					房屋介绍：
+				</p>
+				<p class="dis-infor">
+				小窝取名为「瞳孔」。瞳孔虽小,却包含着整个宇宙。第一次做民宿,沉醉于软装设计，瞳孔位于陕西南路法商建筑“步高里”,建于1930年。隐于闹市的瞳孔可以带给你不一样的体验。透过水泥墙面上镶嵌着的一扇扇高大而明亮的窗户,仿佛仍能窥见当年发生在这条弄堂内的故事,或大情小爱,或点滴邻里生活。拉上布帘,关掉所有的光源,泡上一壶茶或咖啡,打开投影仪,选一部钟情的电影
+				</p>
+			</div>
+			<div class="position">
+				<p class="title">
+					房屋位置：
+				</p>
+				<img src="../image/map.jpg" />
+			</div>
+			<div class="comment clearfix">
+				<p class="title">
+					评价：
+				</p>
+				<div class="commenta clearfix">
+					<div class="commentl">
+						<img src="../image/star1.jpg" />
+					</div>	
+					<div class="commentr">
+						<p class="user">星辉</p>
+						<p class="commet-dis">
+							设备齐全，交通便利，我们2个人住，房东人很好
+						</p>
+						<p class="op">
+							<button class="zan">点赞</button>
+							<button class="hui">回复</button>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="operation clearfix">
+				<button>联系房东</button>
+				<button class="left">VR</button>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+		apiready=function(){
+			var UIScrollPicture = api.require('UIScrollPicture');
+			UIScrollPicture.open({
+			    rect: {
+			        x: 0,
+			        y: 0,
+			        w: api.winWidth,
+			        h: api.winHeight / 2.5
+			    },
+			    data: {
+			        paths: [
+			            'widget://res/img/f1.jpg',
+			            'widget://res/img/f1.jpg',
+			            'widget://res/img/f1.jpg',
+			            'widget://res/img/f1.jpg'
+			        ],
+			        captions: ['1', '2', '3', '4']
+			    },
+			    styles: {
+			        caption: {
+			            height: 35,
+			            color: '#E0FFFF',
+			            size: 13,
+			            bgColor: '#696969',
+			            position: 'bottom'
+			        },
+			        indicator: {
+			            align: 'center',
+			            color: '#FFFFFF',
+			            activeColor: '#DA70D6'
+			        }
+			    },
+			    placeholderImg: 'widget://res/f1.jpg',
+			    contentMode: 'scaleToFill',
+			    interval: 5,
+			    fixedOn: api.frameName,
+			    loop: true,
+			    fixed: false
+			}
+			/*, function(ret, err) {
+			    if (ret) {
+			        alert(JSON.stringify(ret));
+			    } else {
+			        alert(JSON.stringify(err));
+			    }
+			}*/
+			
+			);
+		};
+	</script>
+</html>

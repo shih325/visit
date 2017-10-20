@@ -1,0 +1,58 @@
+html {width: 100%;min-height: 100%;background: #FFFFFF;}		
+body {width: 100%;min-height: 100%;background: #FFFFFF;}		
+		
+.hot_card {position: relative;background: #ffffff;margin-bottom:10px;}		
+.hot_cover {width: 90%;}		
+.videotitle {font-size: 14px; padding-left: 10px; padding-bottom: 2px; padding-top: 7px;}		
+.videoLen {font-size: 9px; color: #A7A7AB; padding-left: 10px; padding-bottom: 7px; padding-top: 5px;}		
+.cardr {position: absolute; width: 120px; right: 10px; bottom: 5px;}		
+.rightarrow {height: 9px; padding-right: 5px;}		
+		
+.vd {color: #D9D9DD;}		
+		/* 分享按钮点击 */		
+		/*.cardr {background-image: url(../image/share_icon_normal.png); height: 40px; background-size: 40px; bottom: 10px;}*/		
+.sharehover {background-image: url(../image/share_icon_pressed.png) !important;}	
+.show {display:block;}
+.hide{display:none;}	
+.active1 {
+	border-bottom: 2px solid #1abc9c!important;
+}
+.price {
+	color:#000000;
+	font-size:16px;
+}
+.description {
+	font-size:15px;
+	color:#666;
+}
+.cardl {
+	margin-left:15px;
+}
+.cardr{
+	margin-right: -15px;
+}
+.cardr li {
+	float: left;
+	margin-right:10px;
+} 
+.cardr li:last-of-type {
+	margin-right:0px;
+}
+.cardr li img{
+	width:25px;
+	height:25px;
+}
+.aui-tab {
+	position:fixed;
+	top:0px;
+	height:45px;
+	z-index:1;
+}
+div.show {
+	margin-top:55px;
+}
+.hot_cover {
+	height:200px;
+	margin:0 auto;
+	display: block;
+}
