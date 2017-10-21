@@ -7,8 +7,8 @@
     <title>日期</title>
     <link rel="stylesheet" type="text/css" href="../css/api.css"/>
     <style>
-    	header{ 
-    		background-color: #333; 
+    	header{
+    		background-color: #333;
         	height:60px;
         	color: #fff;
         }
@@ -33,12 +33,12 @@
     		color: #fff;
     		text-decoration:none;
     		vertical-align: 13px;
-    		margin-left: -5px; 
+    		margin-left: -5px;
     	}
     </style>
 </head>
 <body>
-	<header>		
+	<header>
 		<div class="head">
 			<div id="back">
 				<a href="../index.html">
@@ -52,56 +52,65 @@
 					<span class="location">定位</span>
 				</a>
 			</div>
-		</div>	    
+		</div>
     </header>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
 	apiready = function(){
-		var UICalendar = api.require('UICalendar');
-		UICalendar.open({
-		    rect: {
-		        x: 18,
-		        y: api.frameHeight / 2 - 170,
-		        w: api.frameWidth - 40,
-		        h: 370
-		    },
-		    styles: {
-		        bg: '#fff',
-		        week: {
-		            weekdayColor: '#333333',
-		            weekendColor: '#ff0000',
-		            size: 16
-		        },
-		        date: {
-		            color: '#333333',
-		            selectedColor: '#fff',
-		            selectedBg: '#ccc',
-		            size: 16
-		        },
-		        today: {
-		            color: '#fff',
-		            bg: '#333333',
-		        },
-		        specialDate: {
-		            color: '#FF9900',
-		            bg: '#fff'
-		        }
-		    },
-		    specialDate: [{
-		        date: '2017-09-10'
-		    }],
-		    switchMode: 'vertical',
-		    fixedOn: api.frameName,
-		    fixed: false
+		// var UICalendar = api.require('UICalendar');
+		// UICalendar.open({
+		//     rect: {
+		//         x: 18,
+		//         y: api.frameHeight / 2 - 170,
+		//         w: api.frameWidth - 40,
+		//         h: 370
+		//     },
+		//     styles: {
+		//         bg: '#fff',
+		//         week: {
+		//             weekdayColor: '#333333',
+		//             weekendColor: '#ff0000',
+		//             size: 16
+		//         },
+		//         date: {
+		//             color: '#333333',
+		//             selectedColor: '#fff',
+		//             selectedBg: '#ccc',
+		//             size: 16
+		//         },
+		//         today: {
+		//             color: '#fff',
+		//             bg: '#333333',
+		//         },
+		//         specialDate: {
+		//             color: '#FF9900',
+		//             bg: '#fff'
+		//         }
+		//     },
+		//     specialDate: [{
+		//         date: '2017-09-10'
+		//     }],
+		//     switchMode: 'vertical',
+		//     fixedOn: api.frameName,
+		//     fixed: false
+		// }, function(ret, err) {
+		//     if (ret) {
+		//         //alert(JSON.stringify(ret));
+		//     } else {
+		//         alert(JSON.stringify(err));
+		//     }
+		// });
+		var calendar = api.require('calendar');
+		calendar.open({
+		    x: 100,
+		    y: 100,
+		    width: 300,
+		    height: 300,
+		    specialDate: ['2014-05-01', '2014-05-11', '2014-05-20', '2014-05-25', '2014-05-31']
 		}, function(ret, err) {
-		    if (ret) {
-		        //alert(JSON.stringify(ret));
-		    } else {
-		        alert(JSON.stringify(err));
-		    }
+		    var date = ret.date;
 		});
-
 	};
 </script>
 </html>
