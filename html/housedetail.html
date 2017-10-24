@@ -11,6 +11,15 @@
     		padding:0px;
     		width:100%;
     	}
+			.gray {
+				color:#ccc;
+			}
+			.heart-active {
+				color:#f069a1;
+			}
+			.star-active {
+				color:#ff9e3b;
+			}
     	.content>img {
     		width:100%;
     		height:220px;
@@ -67,7 +76,7 @@
     		border-radius: 20px;
     	}
     	.commentr {
-    		float:right; 
+    		float:right;
     		width:80%;
     	}
     	.user {
@@ -121,16 +130,16 @@
 		<div class="content clearfix">
 			<img src="../image/star2.jpg"/>
 			<ul class="cardr clearfix">
-				<li>
+				<li class="star gray">
 					<img src="../image/collect.png" alt="喜欢"/>
 				</li>
-				<li>
+				<li class="heart gray">
 					<img src="../image/comment.png" alt="收藏"/>
 				</li>
-				<li>
+				<li class="share">
 					<img src="../image/share.png" alt="分享"/>
 				</li>
-			</ul>	
+			</ul>
 			<div class="infor">
 				<p class="title">
 					基本信息：
@@ -162,14 +171,14 @@
 				</p>
 				<img src="../image/map.jpg" />
 			</div>
-			<div class="comment clearfix">
+			<!-- <div class="comment clearfix">
 				<p class="title">
 					评价：
 				</p>
 				<div class="commenta clearfix">
 					<div class="commentl">
 						<img src="../image/star1.jpg" />
-					</div>	
+					</div>
 					<div class="commentr">
 						<p class="user">星辉</p>
 						<p class="commet-dis">
@@ -181,14 +190,14 @@
 						</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="operation clearfix">
 				<button>联系房东</button>
 				<button class="left">VR</button>
 			</div>
 		</div>
 	</div>
-	
+
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
@@ -238,7 +247,7 @@
 			        alert(JSON.stringify(err));
 			    }
 			}*/
-			
+
 			);
 		};
 	</script>
