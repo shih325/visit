@@ -11,14 +11,14 @@
     		padding:0px;
     		width:100%;
     	}
-    	.content>img {
+			.content>img {
     		width:100%;
     		height:220px;
     	}
     	.cardr {float:right; width: 120px; margin-right: 20px;margin-top:10px;}
     	.cardr li {
     		float:left;
-    		margin-left:10px;
+    		margin-left:20px;
     	}
     	.title {
     		font-size:18px;
@@ -67,7 +67,7 @@
     		border-radius: 20px;
     	}
     	.commentr {
-    		float:right; 
+    		float:right;
     		width:80%;
     	}
     	.user {
@@ -97,23 +97,33 @@
     		/*background-color: #C8C7CC;*/
     	}
     	.operation {
-			margin:20px auto;
+			margin:20px 30px 20px 80px!important;
 			width:70%!important;
-			border:none!important;
     	}
     	.operation button {
-    		float:right;
-			height:35px;
-			width:32%;
-			color:#333333;
-			font-size:18px;
-			font-weight:700;
-			background:#B0D44C;
-			border-radius: 3px;
+	  		float:right;
+				height:30px;
+				width:27%;
+				color:#333333;
+				font-size:16px;
+				font-weight:700;
+				background:#B0D44C;
+				border-radius: 3px;
     	}
     	.operation .left {
-    		margin-right:30px;
+    		margin-right:23px;
     	}
+			.back {
+				float: left;
+				height:37px;
+				width:42%;
+				margin:0 0 20px 100px;
+				color:#333333;
+				font-size:18px;
+				font-weight:700;
+				background:#B0D44C;
+				border-radius: 3px;
+			}
     </style>
 </head>
 <body>
@@ -122,15 +132,12 @@
 			<img src="../image/star2.jpg"/>
 			<ul class="cardr clearfix">
 				<li>
-					<img src="../image/comment.png" alt="收藏"/>
-				</li>
-				<li>
 					<img src="../image/share.png" alt="分享"/>
 				</li>
 				<li>
 					<img src="../image/abandon.png" alt="删除"/>
 				</li>
-			</ul>	
+			</ul>
 			<div class="infor">
 				<p class="title">
 					基本信息：
@@ -160,16 +167,21 @@
 				<p class="title">
 					房屋位置：
 				</p>
-				<img src="../image/map.jpg" />
+				<!-- <img src="../image/map.jpg" /> -->
+				<!-- <frame name="fraMap">
+
+				</frame> -->
+				<button onclick="map();" >打开定位</button>
+				<button onclick="close();" >关闭定位</button>
 			</div>
-			<div class="comment clearfix">
+			<!-- <div class="comment clearfix">
 				<p class="title">
 					评价：
 				</p>
 				<div class="commenta clearfix">
 					<div class="commentl">
 						<img src="../image/star1.jpg" />
-					</div>	
+					</div>
 					<div class="commentr">
 						<p class="user">星辉</p>
 						<p class="commet-dis">
@@ -180,11 +192,11 @@
 							<button class="hui">回复</button>
 						</p>
 					</div>
-				</div>
-				<div class="commenta clearfix">
+				</div> -->
+				<!-- <div class="commenta clearfix">
 					<div class="commentl">
 						<img src="../image/star1.jpg" />
-					</div>	
+					</div>
 					<div class="commentr">
 						<p class="user">星辉</p>
 						<p class="commet-dis">
@@ -196,16 +208,18 @@
 						</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="operation clearfix">
 				<button>联系房东</button>
 				<button class="left">VR</button>
 			</div>
+			<button class="back">返回上一页</button>
 		</div>
 	</div>
-	
+
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/map.js"></script>
 <script type="text/javascript">
 		apiready=function(){
 			var UIScrollPicture = api.require('UIScrollPicture');
@@ -242,7 +256,7 @@
 			    placeholderImg: 'widget://res/f1.jpg',
 			    contentMode: 'scaleToFill',
 			    interval: 5,
-			    fixedOn: api.frameName,
+			    fixedOn: "fraMap",
 			    loop: true,
 			    fixed: false
 			}
@@ -253,8 +267,13 @@
 			        alert(JSON.stringify(err));
 			    }
 			}*/
-			
+
+
 			);
+
+
+
+
 		};
 	</script>
 </html>
