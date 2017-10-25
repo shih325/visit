@@ -124,6 +124,9 @@
 				background:#B0D44C;
 				border-radius: 3px;
 			}
+			.back a {
+				color:#000;
+			}
     </style>
 </head>
 <body>
@@ -167,12 +170,13 @@
 				<p class="title">
 					房屋位置：
 				</p>
+
 				<!-- <img src="../image/map.jpg" /> -->
 				<!-- <frame name="fraMap">
 
 				</frame> -->
-				<!-- <button onclick="close();" >打开定位</button> -->
-				<button onclick="close( );" >关闭定位</button>
+				<button onclick="map();" >打开定位</button>
+				<button onclick="closew();" >关闭定位</button>
 			</div>
 			<!-- <div class="comment clearfix">
 				<p class="title">
@@ -211,67 +215,67 @@
 			</div> -->
 			<div class="operation clearfix">
 				<button>联系房东</button>
-				<button class="left">VR</button>
+				<button class="left" onclick="quanjingw();">VR</button>
 			</div>
-			<button class="back">返回上一页</button>
+			<button class="back">
+				<a href="frame1.html">返回上一页</a>
+			</button>
 		</div>
 	</div>
 
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
-<!-- <script type="text/javascript" src="../script/map1.js"></script>	 -->
 <script type="text/javascript" src="../script/map.js"></script>
+<script type="text/javascript" src="../script/map2.js"></script>
 <script type="text/javascript">
 		apiready=function(){
 			var UIScrollPicture = api.require('UIScrollPicture');
 			UIScrollPicture.open({
-			    rect: {
-			        x: 0,
-			        y: 0,
-			        w: api.winWidth,
-			        h: api.winHeight / 2.5
-			    },
-			    data: {
-			        paths: [
-			            'widget://res/img/f1.jpg',
-			            'widget://res/img/f1.jpg',
-			            'widget://res/img/f1.jpg',
-			            'widget://res/img/f1.jpg'
-			        ],
-			        captions: ['1', '2', '3', '4']
-			    },
-			    styles: {
-			        caption: {
-			            height: 35,
-			            color: '#E0FFFF',
-			            size: 13,
-			            bgColor: '#696969',
-			            position: 'bottom'
-			        },
-			        indicator: {
-			            align: 'center',
-			            color: '#FFFFFF',
-			            activeColor: '#DA70D6'
-			        }
-			    },
-			    placeholderImg: 'widget://res/f1.jpg',
-			    contentMode: 'scaleToFill',
-			    interval: 5,
-			    fixedOn: "fraMap",
-			    loop: true,
-			    fixed: false
+					rect: {
+							x: 0,
+							y: 0,
+							w: api.winWidth,
+							h: api.winHeight / 2.5
+					},
+					data: {
+							paths: [
+									'widget://image/star2.jpg',
+									'widget://image/star4.jpg',
+									'widget://image/star5.jpg',
+									'widget://image/star6.jpg'
+							],
+							captions: ['卧室', '客厅一角', '客厅一角', '客厅一角']
+					},
+					styles: {
+							caption: {
+									height: 35,
+									color: '#E0FFFF',
+									size: 13,
+									bgColor: '#696969',
+									position: 'bottom'
+							},
+							indicator: {
+									align: 'center',
+									color: '#FFFFFF',
+									activeColor: '#DA70D6'
+							}
+					},
+					placeholderImg: 'widget://res/f1.jpg',
+					contentMode: 'scaleToFill',
+					interval: 5,
+					fixedOn: api.frameName,
+					loop: true,
+					fixed: false
 			}
 			/*, function(ret, err) {
-			    if (ret) {
-			        alert(JSON.stringify(ret));
-			    } else {
-			        alert(JSON.stringify(err));
-			    }
+					if (ret) {
+							alert(JSON.stringify(ret));
+					} else {
+							alert(JSON.stringify(err));
+					}
 			}*/
 
-
 			);
-
 		};
 	</script>
 </html>
