@@ -27,5 +27,5 @@
 	<permission name="fileSystem" />
 	<permission name="internet" />
 	<permission name="bootCompleted" />
-	<permission name="hardware" />  <!-- <feature name="smsVerify">    <param name="android_app_key" value="e2ffa3hse299"/>    <param name="android_app_secret" value="7a0ejgd7df95607464eaaec5c0f9b2b9"/>    <param name="ios_app_key" value="e2fhsc7fbw00"/>    <param name="ios_app_secret" value="db5abtd9931e3211932dde17c94c30ae"/>  </feature> -->  <feature name="bMap">   <param name="android_api_key" value="9C8DD02D-55A3-F3AA-3275-8BDFF5EA9129" />   <!-- <param name="ios_api_key" value="81qz3dBYB5q2nGji4IYrawr1" /> --> </feature>
+	<permission name="hardware" />  <!-- <feature name="smsVerify">    <param name="android_app_key" value="e2ffa3hse299"/>    <param name="android_app_secret" value="7a0ejgd7df95607464eaaec5c0f9b2b9"/>    <param name="ios_app_key" value="e2fhsc7fbw00"/>    <param name="ios_app_secret" value="db5abtd9931e3211932dde17c94c30ae"/>  </feature> -->  <feature name="bMap">   <param name="android_api_key" value="9C8DD02D-55A3-F3AA-3275-8BDFF5EA9129" />   <param name="ios_api_key" value="81qz3dBYB5q2nGji4IYrawr1" /> </feature>
 </widget>
