@@ -1,13 +1,8 @@
-function closew(){
-    var map = api.require('bMap');
-	  map.close();
-}
-
-
-function quanjingw(){
+function quanjing (){
   var panorama = api.require('panorama');
-  openquanjing();
-  function openquanjing(){
+  quanjingOpen();
+
+  function quanjingOpen(){
     panorama.open({
         x: 0,
         y: 0,
@@ -20,5 +15,5 @@ function quanjingw(){
             // alert(JSON.stringify(ret));
         }
     });
-}
+  }
 }

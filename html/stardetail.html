@@ -6,12 +6,22 @@
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>收藏详情页</title>
     <link rel="stylesheet" type="text/css" href="../css/api.css"/>
-    <style>
+		<!-- <link rel="stylesheet" type="text/css" href="../css/aui.css"/> -->
+		<style>
     	body{
     		padding:0px;
     		width:100%;
     	}
-			.content>img {
+			.gray {
+				color:#ccc;
+			}
+			.heart-active {
+				color:#f069a1;
+			}
+			.star-active {
+				color:#ff9e3b;
+			}
+    	.content>img {
     		width:100%;
     		height:220px;
     	}
@@ -22,7 +32,7 @@
     	}
     	.title {
     		font-size:18px;
-			color:#000000;
+				color:#000000;
     		margin-bottom:20px;
     	}
     	.content {
@@ -79,54 +89,54 @@
     	.zan {
     		/*padding-left:15px!important;*/
     		background:url(../image/zan.png) no-repeat 3px 3px;
-		}
-		.hui {
-			background:url(../image/hui.png) no-repeat 3px 3px;
-    		margin-right:20px;
-		}
-    	.commentr .op button {
-    		float:right;
-    		border:1px solid #A1D4CF;
-    		border-radius: 15px;
-    		width:55px;
-    		font-size: 11px;
-    		padding:3px;
-    		text-align:right;
-    		box-sizing: border-box;
-    		line-height:20px;
-    		/*background-color: #C8C7CC;*/
-    	}
-    	.operation {
-			margin:20px 30px 20px 80px!important;
-			width:70%!important;
-    	}
-    	.operation button {
-	  		float:right;
-				height:30px;
-				width:27%;
-				color:#333333;
-				font-size:16px;
-				font-weight:700;
-				background:#B0D44C;
-				border-radius: 3px;
-    	}
-    	.operation .left {
-    		margin-right:23px;
-    	}
-			.back {
-				float: left;
-				height:37px;
-				width:42%;
-				margin:0 0 20px 100px;
-				color:#333333;
-				font-size:18px;
-				font-weight:700;
-				background:#B0D44C;
-				border-radius: 3px;
 			}
-			.back a {
-				color:#000;
+			.hui {
+				background:url(../image/hui.png) no-repeat 3px 3px;
+	    		margin-right:20px;
 			}
+	    	.commentr .op button {
+	    		float:right;
+	    		border:1px solid #A1D4CF;
+	    		border-radius: 15px;
+	    		width:55px;
+	    		font-size: 11px;
+	    		padding:3px;
+	    		text-align:right;
+	    		box-sizing: border-box;
+	    		line-height:20px;
+	    		/*background-color: #C8C7CC;*/
+	    	}
+				.operation {
+				margin:20px 30px 20px 80px!important;
+				width:70%!important;
+	    	}
+	    	.operation button {
+		  		float:right;
+					height:30px;
+					width:27%;
+					color:#333333;
+					font-size:16px;
+					font-weight:700;
+					background:#B0D44C;
+					border-radius: 3px;
+	    	}
+	    	.operation .left {
+	    		margin-right:23px;
+	    	}
+				.back {
+					float: left;
+					height:37px;
+					width:42%;
+					margin:0 0 20px 100px;
+					color:#333333;
+					font-size:18px;
+					font-weight:700;
+					background:#B0D44C;
+					border-radius: 3px;
+				}
+				.back a {
+					color:#fff;
+				}
     </style>
 </head>
 <body>
@@ -136,6 +146,7 @@
 			<ul class="cardr clearfix">
 				<li>
 					<img src="../image/share.png" alt="分享"/>
+					<!-- <i class="aui-icon-delete"></i> -->
 				</li>
 				<li>
 					<img src="../image/abandon.png" alt="删除"/>
@@ -231,48 +242,48 @@
 		apiready=function(){
 			var UIScrollPicture = api.require('UIScrollPicture');
 			UIScrollPicture.open({
-					rect: {
-							x: 0,
-							y: 0,
-							w: api.winWidth,
-							h: api.winHeight / 2.5
-					},
-					data: {
-							paths: [
-									'widget://image/star2.jpg',
-									'widget://image/star4.jpg',
-									'widget://image/star5.jpg',
-									'widget://image/star6.jpg'
-							],
-							captions: ['卧室', '客厅一角', '客厅一角', '客厅一角']
-					},
-					styles: {
-							caption: {
-									height: 35,
-									color: '#E0FFFF',
-									size: 13,
-									bgColor: '#696969',
-									position: 'bottom'
-							},
-							indicator: {
-									align: 'center',
-									color: '#FFFFFF',
-									activeColor: '#DA70D6'
-							}
-					},
-					placeholderImg: 'widget://res/f1.jpg',
-					contentMode: 'scaleToFill',
-					interval: 5,
-					fixedOn: api.frameName,
-					loop: true,
-					fixed: false
+			    rect: {
+			        x: 0,
+			        y: 0,
+			        w: api.winWidth,
+			        h: api.winHeight / 2.5
+			    },
+			    data: {
+						paths: [
+								'widget://image/star2.jpg',
+								'widget://image/star4.jpg',
+								'widget://image/star5.jpg',
+								'widget://image/star6.jpg'
+						],
+			        captions: ['卧室', '客厅一角', '客厅一角', '客厅一角']
+			    },
+			    styles: {
+			        caption: {
+			            height: 35,
+			            color: '#E0FFFF',
+			            size: 13,
+			            bgColor: '#696969',
+			            position: 'bottom'
+			        },
+			        indicator: {
+			            align: 'center',
+			            color: '#FFFFFF',
+			            activeColor: '#DA70D6'
+			        }
+			    },
+			    placeholderImg: 'widget://res/f1.jpg',
+			    contentMode: 'scaleToFill',
+			    interval: 5,
+			    fixedOn: api.frameName,
+			    loop: true,
+			    fixed: false
 			}
 			/*, function(ret, err) {
-					if (ret) {
-							alert(JSON.stringify(ret));
-					} else {
-							alert(JSON.stringify(err));
-					}
+			    if (ret) {
+			        alert(JSON.stringify(ret));
+			    } else {
+			        alert(JSON.stringify(err));
+			    }
 			}*/
 
 			);
