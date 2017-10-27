@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+   <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>开发</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/release.css"/>
+    <style>
+        .empty{ text-align: center; padding: 120px 0; }
+    </style>
+</head>
+<body>
+    <form class="release" method="post">
+    	<div class="div-address">
+    		<label for="address">您的房源位置</label>
+    		<input type="text" name="address" class="address" placeholder="吉林省长春市净月旅游开发区2333号" required="required"/>
+    	</div>
+    	<div class="div-type clearfix">
+    		<p>您的房源类型</p>
+	    	<!--<div class="aui-form">
+	    		<div class="aui-input-row aui-warning">
+	    			<label class="aui-input-addon">name</label>
+	    			<input type="text" class="aui-input" value="错误警告">
+	    			<i class="aui-input-addon aui-iconfont aui-icon-warnfill"></i>
+	    		</div>
+	    		<div class="aui-input-row aui-success">
+	    			<label class="aui-input-addon">name</label>
+	    			<input type="text" class="aui-input" value="输入">
+	    			<i class="aui-input-addon aui-iconfont aui-icon-roundcheckfill"></i>
+	    		</div>
+	    		<div class="aui-input-row">
+	    			<span class="aui-input-addon">pass</span>
+	    			<input type="password" class="aui-input" placeholder="password">
+	    		</div>
+	    		<div class="aui-input-row">
+	    			<span class="aui-input-addon">num</span>
+	    			<input type="number" class="aui-input" placeholder="number">
+	    		</div>
+	    		<div class="aui-input-row">
+	    			<span class="aui-input-addon">email</span>
+	    			<input type="email" class="aui-input" placeholder="email">
+	    		</div>
+	    		<div class="aui-input-row">
+	    			<span class="aui-input-addon">url</span>
+	    			<input type="url" class="aui-input" placeholder="http://">
+	    		</div>
+	    		<div class="aui-input-row">
+	    			<span class="aui-input-addon">age</span>
+	    			<div class="aui-range">
+	    				<input type="range" class="aui-range-primary" value="30" max="100" min="1" step="1" id="range" />
+	    			</div>
+	    		</div>
+	    		<div class="aui-btn-row">
+	    			<div class="aui-btn aui-btn-success" onclick="return false;">确认</div>
+	    			<div class="aui-btn aui-btn-warning" onclick="return false;">取消</div>
+	    		</div>
+	    	</div>-->
+	    	<label>整套房源</label>
+	    	<input type="radio" name="type" checked>
+	    	<label>独立房间</label>
+	    	<input type="radio" name="type">
+	    	<label>合作房间</label>
+	    	<input type="radio" name="type">
+    	</div>
+    	<div class="div-user clearfix">
+    		<span class="aui-input-addon">所容纳房客数</span>
+			<span class="str">人</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" required="required"/>
+    	</div>
+    	<div class="div-bedroom clearfix">
+    		<span class="aui-input-addon">卧室数</span>
+			<span class="str">间</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" required="required" />
+    	</div>
+    	<div class="div-toilet clearfix">
+    		<span class="aui-input-addon">卫生间数</span>
+			<span class="str">间</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" required="required" />
+    	</div>
+    	<div class="div-bed clearfix">
+    		<span class="aui-input-addon">床铺数</span>
+			<span class="str">张</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" required="required" />
+    	</div>
+    	<div class="div-facilities clearfix">
+    		<label for="facilities">房间内设施</label>
+    		<input type="text" name="facilities" class="facilities" placeholder="电视、电脑、wifi、空调等" required="required" />
+    	</div>
+    	<div class="div-price clearfix">
+    		<span class="aui-input-addon">价格</span>
+			<span class="str">元</span>
+			<input type="number" class="aui-input" placeholder="请填写数字" required="required" />
+    	</div>
+    	<div class="div-checkin clearfix">
+    		<span class="aui-input-addon">请设置入住时间</span>
+			<!-- <span class="str">/天</span> -->
+			<input type="datetime" class="aui-input" placeholder="请填写时间" required="required" />
+    	</div>
+    	<div class="div-checkout clearfix">
+    		<span class="aui-input-addon">请设置退房时间</span>
+			<!-- <span class="str">/天</span> -->
+			<input type="datetime" class="aui-input" placeholder="请填写时间" required="required" />
+    	</div>
+    	<div class="div-description">
+    		<label for="description">请为您的房子做个介绍</label>
+    		<textarea name="description" class="description" placeholder="请输入您的描述" required="required"></textarea>
+    	</div>
+    	<div class="div-photo clearfix">
+    		<span class="aui-input-addon">请上传6张图片生成VR模型</span>
+			<img src="../image/up.png" alt="上传" class="photo"/>
+    		<!--<input type="file" />-->
+    	</div>
+    	<div class="div-submit">
+    		<button class="room-submit"><a href="myhouse.html">发布房源</a></button>
+    	</div>
+    </form>
+    <script type="text/javascript" src="../script/api.js"></script>
+    <script type="text/javascript" src="../script/release.js"></script>
+</body>
+</html>

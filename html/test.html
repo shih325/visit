@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>test</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/api.css"/> -->
+
+</head>
+<body>
+  <button class="getJson">点击获取城市</button>
+	<p class="data">+</p>
+</body>
+<!-- <script type="text/javascript" src="../script/api.js"></script> -->
+<!-- <script type="text/javascript" src="../script/jquery-1.8.3.js"></script> -->
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script><script type="text/javascript">
+		apiready=function(){
+
+    }
+</script>
+<script>
+  $(function(){
+    $(".getJson").click(function(){
+			$.ajax({
+				type:"get",
+				// 后台填写，处理数据地址，一般前台用json模拟
+				// url:"http://47.93.40.129/visit/test/method",
+				url:"UICityList.json",
+				// 前后台传送数据格式，可以为空，智能判断
+				data:"",
+				dataType:"json",//json数据类型
+				//请求成功时执行的函数
+				success:function(data){
+					var text="";
+					$.each(data.topCitys,function(i,o){
+
+						text += "<p>"+o.city+"</p>";
+
+					})
+						$(".data").append(text);
+				},
+				error:function(){
+					alert('数据请求失败！');
+				}
+			});
+    })
+  })
+</script>
+</html>
